@@ -22,5 +22,6 @@ Thumbs.db
 # Optional: Uncomment if you don't want to upload the trained model
 # encodings.pickle
 
-# Exclude dataset images (privacy)
-dataset/
+# Exclude dataset images (privacy) but keep the folder structure
+dataset/*
+!dataset/README.txt
