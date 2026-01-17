@@ -22,5 +22,5 @@ Thumbs.db
 # Optional: Uncomment if you don't want to upload the trained model
 # encodings.pickle
 
-# Optional: Uncomment if you don't want to upload the dataset images
-# dataset/
+# Exclude dataset images (privacy)
+dataset/
