@@ -1,0 +1,26 @@
+# Virtual environment
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE settings
+.vscode/
+.idea/
+
+# Logs and temp files
+*.log
+error_log.txt
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Optional: Uncomment if you don't want to upload the trained model
+# encodings.pickle
+
+# Optional: Uncomment if you don't want to upload the dataset images
+# dataset/
