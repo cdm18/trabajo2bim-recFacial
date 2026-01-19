@@ -72,3 +72,8 @@ def entrenar():
     hilo.start()
         
     return jsonify({"status": "success", "message": "entrenamiento iniciado"})
+
+@main_bp.route("/status")
+def status():
+    # endpoint para consultar si se esta entrenando
+    return jsonify({"training": is_training})

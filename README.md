@@ -23,16 +23,16 @@ El proyecto se basa en investigaciones fundamentales en el campo de la visión a
 
 Se ha re-factorizado el código para cumplir con estándares de ingeniería de software, implementando el patrón **MVC**:
 
-### 🧠 Modelo (`app/models/`)
+### Modelo (`app/models/`)
 El núcleo lógico. Aquí reside la inteligencia el sistema.
 *   **`facial_recognition.py`**: Clase modular que maneja la carga de la base de datos biométrica (`encodings.pickle`) y realiza la inferencia matemática para comparar rostros en tiempo real.
 
-### 🖥️ Vista (`app/templates/` y `app/static/`)
+### Vista (`app/templates/` y `app/static/`)
 La interfaz de usuario (UI).
 *   **Dashboard Web**: Una interfaz limpia desarrollada en HTML5 y CSS3 que permite monitorizar la cámara en tiempo real y visualizar los metadatos de reconocimiento (nombre, porcentaje de confianza).
 *   **Interactividad**: JavaScript asíncrono para comunicarse con el servidor sin recargar la página.
 
-### 🎮 Controlador (`app/routes/`)
+### Controlador (`app/routes/`)
 El gestor de tráfico.
 *   **`main.py`**: Gestiona las peticiones del cliente, coordina los hilos (threading) para evitar bloqueos durante el entrenamiento y sirve el flujo de video procesado eficientemente.
 
@@ -85,5 +85,5 @@ La implementación de una arquitectura Web/MVC sobre los scripts de reconocimien
 *   **Escalabilidad**: La estructura modular permite cambiar el motor de reconocimiento o la interfaz sin afectar al resto del sistema.
 
 ---
-**Desarrollado para el Trabajo de 2do Bimestre - Reconocimiento Facial**
-2026
+**Desarrollado para el Trabajo de 2do Bimestre**
+
