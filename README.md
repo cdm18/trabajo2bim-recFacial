@@ -76,16 +76,16 @@ El sistema permite la actualización dinámica del modelo. Al agregar nuevas im�
 
 ```mermaid
 graph TD
-    A[Usuario] -->|Sube Imágenes| B(Carpeta dataset/)
-    A -->|Clic "Re-entrenar"| C[Interfaz Web]
-    C -->|Petición POST| D[Servidor Flask]
-    D -->|Inicia Hilo| E[Motor de IA]
-    E -->|Lee Imágenes| B
-    E -->|Extrae Rasgos| F[Procesamiento Dlib/HOG]
-    F -->|Genera Embeddings| G[(encodings.pickle)]
-    G -->|Recarga en Memoria| E
-    E -->|Confirma Éxito| C
-    C -->|Feedback Visual| A
+    A[Usuario] -- Sube Imagenes --> B(Carpeta dataset/)
+    A -- Clic Re-entrenar --> C[Interfaz Web]
+    C -- Peticion POST --> D[Servidor Flask]
+    D -- Inicia Hilo --> E[Motor de IA]
+    E -- Lee Imagenes --> B
+    E -- Extrae Rasgos --> F[Procesamiento Dlib/HOG]
+    F -- Genera Embeddings --> G[(encodings.pickle)]
+    G -- Recarga en Memoria --> E
+    E -- Confirma Exito --> C
+    C -- Feedback Visual --> A
 ```
 
 ### Gestión de Usuarios (Dataset)
