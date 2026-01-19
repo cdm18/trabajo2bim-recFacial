@@ -71,6 +71,23 @@ python run.py
 ```
 Abre tu navegador y ve a: `http://localhost:5000`
 
+### Pipeline de Entrenamiento
+El sistema permite la actualización dinámica del modelo. Al agregar nuevas imágenes a la carpeta `dataset/`, el usuario puede disparar el proceso de re-entrenamiento desde la web.
+
+```mermaid
+graph TD
+    A[Usuario] -->|Sube Imágenes| B(Carpeta dataset/)
+    A -->|Clic "Re-entrenar"| C[Interfaz Web]
+    C -->|Petición POST| D[Servidor Flask]
+    D -->|Inicia Hilo| E[Motor de IA]
+    E -->|Lee Imágenes| B
+    E -->|Extrae Rasgos| F[Procesamiento Dlib/HOG]
+    F -->|Genera Embeddings| G[(encodings.pickle)]
+    G -->|Recarga en Memoria| E
+    E -->|Confirma Éxito| C
+    C -->|Feedback Visual| A
+```
+
 ### Gestión de Usuarios (Dataset)
 Para agregar una nueva persona al sistema:
 1.  Crea una carpeta con el nombre de la persona en `dataset/` (ej: `dataset/Juan_Perez`).
