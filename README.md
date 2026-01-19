@@ -1,5 +1,15 @@
-# Sistema de Reconocimiento Facial con Arquitectura Web MVC
+# Solución de Reconocimiento Facial con Arquitectura Web MVC (Trabajo de 2do Bimestre)
+**Integrantes:**
 
+*   **Carlos Mejia**
+*   **Alex Ramirez**
+*   **Sebastian Calderon**
+
+**Profesor:**
+
+*   **Ing. Jorge Lopez Zambrano**
+
+---
 Este proyecto implementa una solución completa de reconocimiento facial biométrico utilizando técnicas avanzadas de Deep Learning, encapsuladas en una arquitectura de software moderna Modelo-Vista-Controlador (MVC).
 
 ## 1. Introducción y Contexto Académico
