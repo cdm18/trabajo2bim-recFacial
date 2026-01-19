@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Reconocimiento Facial</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Sistema de Reconocimiento Facial</h1>
+            <p>Dashboard de Control y Monitoreo en Tiempo Real</p>
+        </header>
+
+        <main class="main-content">
+            <!-- Sección de Video -->
+            <section class="video-section">
+                <div class="video-container">
+                    <img src="{{ url_for('main.video_feed') }}" alt="Transmisión en Vivo">
+                    <div class="live-indicator">EN VIVO</div>
+                </div>
+            </section>
+
+            <!-- Sección de Control -->
+            <aside class="control-panel">
+                <div class="card">
+                    <h2>Estado del Sistema</h2>
+                    <div class="status-item">
+                        <span class="status-label">Motor:</span>
+                        <span class="status-value active">Activo</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">Modelo:</span>
+                        <span class="status-value ready">Cargado</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Gestión de Base de Datos</h2>
+                    <p class="description">
+                        Si has agregado nuevas fotos a la carpeta <code>dataset</code>,
+                        debes re-entrenar el modelo para detectar los cambios.
+                    </p>
+                    <button id="btn-entrenar" class="btn-primary" onclick="entrenarModelo()">
+                        Re-entrenar Modelo
+                    </button>
+                    <div id="entrenamiento-status" class="status-message"></div>
+                </div>
+            </aside>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 Proyecto de Reconocimiento Facial - Desarrollo Académico</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>
